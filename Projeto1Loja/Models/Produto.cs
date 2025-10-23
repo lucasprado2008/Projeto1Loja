@@ -3,9 +3,9 @@
     public class Produto
     {
         public int IdProduto { get; set; }
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
-        public decimal Preco { get; set; }
-        public decimal Quantidade { get; set; }
+        public string nome { get; set; }
+        public string descricao { get; set; }
+        public decimal preco { get; set; }
+        public decimal quantidade { get; set; }
     }
 }
