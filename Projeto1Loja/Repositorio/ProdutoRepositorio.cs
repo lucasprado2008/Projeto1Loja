@@ -37,7 +37,7 @@ namespace Projeto1Loja.Repositorio
                     Produto produto = null;
                     if (dr.Read())
                     {
-                        produto = new Produto()
+                        produto = new Produto
                         {
                             nome = dr["nome"].ToString(),
                             descricao = dr["descricao"].ToString(),

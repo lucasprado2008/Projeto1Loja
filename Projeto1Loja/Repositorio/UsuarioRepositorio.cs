@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using Projeto1Loja.Models;
 using System.Data;
 namespace Projeto1Loja.Repositorio
@@ -36,7 +35,7 @@ namespace Projeto1Loja.Repositorio
                     Usuario usuario = null;
                     if (dr.Read())
                     {
-                        usuario = new Usuario()
+                        usuario = new Usuario
                         {
                             id = Convert.ToInt32(dr["id"]),
                             email = dr["email"].ToString(),
