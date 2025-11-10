@@ -14,7 +14,7 @@ namespace Projeto1Loja.Controllers
             _produtoRepositorio = ProdutoRepositorio;
         }
 
-        public IActionResult Index()
+        public IActionResult ListarProduto()
         {
             return View(_produtoRepositorio.TodosProdutos());
         }
@@ -70,6 +70,18 @@ namespace Projeto1Loja.Controllers
                     return View(produto);
                 }
             }
+            return View(produto);
+        }
+
+        public IActionResult TelaExcluirProduto(int idProduto)
+        {
+            var produto = _produtoRepositorio.ObterProduto(idProduto);
+
+            if (produto == null)
+            {
+                return NotFound();
+            }
+
             return View(produto);
         }
 

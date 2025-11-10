@@ -31,7 +31,7 @@ namespace Projeto1Loja.Repositorio
                 using (var conexao = new MySqlConnection(_conexaoMySQL))
                 {
                     conexao.Open();
-                    MySqlCommand cmd = new MySqlCommand("Update cliente set nome=@nome, descricao=@descricao, preco=@preco, quantidade=@quantidade " + " where idProduto=@idProduto", conexao);
+                    MySqlCommand cmd = new MySqlCommand("Update tbProduto set nome=@nome, descricao=@descricao, preco=@preco, quantidade=@quantidade " + " where idProduto=@idProduto", conexao);
                     cmd.Parameters.Add("@idProduto", MySqlDbType.Int32).Value = produto.idProduto;
                     cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = produto.nome;
                     cmd.Parameters.Add("@descricao", MySqlDbType.VarChar).Value = produto.descricao;
@@ -71,7 +71,7 @@ namespace Projeto1Loja.Repositorio
                                 idProduto = Convert.ToInt32(dr["idProduto"]),
                                 nome = ((string)dr["nome"]),
                                 descricao = ((string)dr["descricao"]),
-                                preco = Convert.ToDecimal((string)dr["preco"]),
+                                preco = Convert.ToDecimal(dr["preco"]),
                                 quantidade = Convert.ToInt32(dr["quantidade"])
                             });
                 }
@@ -97,7 +97,7 @@ namespace Projeto1Loja.Repositorio
                     produto.nome = (string)(dr["nome"]);
                     produto.descricao = (string)(dr["descricao"]);
                     produto.preco = Convert.ToDecimal(dr["preco"]);
-                    produto.quantidade = Convert.ToInt32("quantidade");
+                    produto.quantidade = Convert.ToInt32(dr["quantidade"]);
                 }
                 return produto;
             }
