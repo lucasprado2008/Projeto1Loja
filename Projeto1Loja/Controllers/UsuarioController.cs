@@ -28,7 +28,6 @@ namespace Projeto1Loja.Controllers
                 return RedirectToAction("Index", "Home");
             }
             ModelState.AddModelError("", "Email / Senha inválidos");
-
             return View();
         }
 
@@ -45,11 +44,6 @@ namespace Projeto1Loja.Controllers
                 _usuarioRepositorio.CadastrarUsuario(usuario);
                 return RedirectToAction("Login");
             }
-            return View();
-        }
-
-        public IActionResult Index()
-        {
             return View();
         }
     }

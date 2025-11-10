@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using Projeto1Loja.Models;
 using System.Data;
+
 namespace Projeto1Loja.Repositorio
 {
     public class UsuarioRepositorio(IConfiguration configuration)
@@ -37,7 +38,8 @@ namespace Projeto1Loja.Repositorio
                     {
                         usuario = new Usuario
                         {
-                            id = Convert.ToInt32(dr["id"]),
+                            idUsuario = Convert.ToInt32(dr["idUsuario"]),
+                            nome = dr["nome"].ToString(),
                             email = dr["email"].ToString(),
                             senha = dr["senha"].ToString()
                         };
