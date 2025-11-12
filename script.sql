@@ -20,7 +20,5 @@ CREATE TABLE tbProduto(
     quantidade int not null
 );
 
-insert into tbUsuario (nome, email, senha) values ("L", "l@1", "1" );
-
 select * from tbUsuario;
 select * from tbProduto;
