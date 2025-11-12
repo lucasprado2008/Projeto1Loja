@@ -1,13 +1,17 @@
 ﻿using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI;
 using Projeto1Loja.Models;
 using System.Data;
 
 namespace Projeto1Loja.Repositorio
 {
-    public class ProdutoRepositorio(IConfiguration configuration)
+    public class ProdutoRepositorio
     {
-        private readonly string _conexaoMySQL = configuration.GetConnectionString("ConexaoMySQL");
+        private readonly string _conexaoMySQL;
+        
+        public ProdutoRepositorio(IConfiguration configuration)
+        {
+           _conexaoMySQL = configuration.GetConnectionString("ConexaoMySQL");
+        }
 
         public void CadastrarProduto(Produto produto)
         {
@@ -24,7 +28,7 @@ namespace Projeto1Loja.Repositorio
             }
         }
 
-        public bool AtualizarProduto(Produto produto)
+        public bool EditarProduto(Produto produto)
         {
             try
             {
@@ -79,7 +83,7 @@ namespace Projeto1Loja.Repositorio
             }
         }
 
-        public Produto ObterProduto(int idProduto)
+        public Produto? ObterProduto(int idProduto)
         {
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {

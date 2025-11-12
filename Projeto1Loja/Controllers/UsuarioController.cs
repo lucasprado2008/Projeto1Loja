@@ -22,12 +22,11 @@ namespace Projeto1Loja.Controllers
         [HttpPost]
         public IActionResult Login(String email, String senha)
         {
-            var Usuario = _usuarioRepositorio.ProcurarUsuario(email);
-            if (Usuario != null && Usuario.senha == senha)
+            var usuario = _usuarioRepositorio.ProcurarUsuario(email);
+            if (usuario != null && usuario.senha == senha)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("IndexProduto", "Produto");
             }
-            ModelState.AddModelError("", "Email / Senha inválidos");
             return View();
         }
 

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MySqlX.XDevAPI;
 using Projeto1Loja.Models;
 using Projeto1Loja.Repositorio;
 
@@ -14,7 +13,7 @@ namespace Projeto1Loja.Controllers
             _produtoRepositorio = ProdutoRepositorio;
         }
 
-        public IActionResult ListarProduto()
+        public IActionResult IndexProduto()
         {
             return View(_produtoRepositorio.TodosProdutos());
         }
@@ -30,14 +29,14 @@ namespace Projeto1Loja.Controllers
             if (ModelState.IsValid)
             {
                 _produtoRepositorio.CadastrarProduto(produto);
-                return RedirectToAction("Login");
+                return RedirectToAction("Login", "Usuario");
             }
             return View();
         }
 
-        public IActionResult EditarProduto(int idProduto)
+        public IActionResult EditarProduto(int id)
         {
-            var produto = _produtoRepositorio.ObterProduto(idProduto);
+            var produto = _produtoRepositorio.ObterProduto(id);
 
             if (produto == null)
             {
@@ -49,7 +48,7 @@ namespace Projeto1Loja.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult EditarProduto(int idProduto, [Bind("idProduto, nome, preco,descricao,quantidade")] Produto produto)
+        public IActionResult EditarProduto(int idProduto, [Bind("idProduto, nome, preco, descricao, quantidade")] Produto produto)
         {
             if (idProduto != produto.idProduto)
             {
@@ -59,9 +58,9 @@ namespace Projeto1Loja.Controllers
             {
                 try
                 {
-                    if (_produtoRepositorio.AtualizarProduto(produto))
+                    if (_produtoRepositorio.EditarProduto(produto))
                     {
-                        return RedirectToAction(nameof(Index));
+                        return RedirectToAction("IndexProduto");
                     }
                 }
                 catch (Exception)
@@ -70,7 +69,7 @@ namespace Projeto1Loja.Controllers
                     return View(produto);
                 }
             }
-            return View(produto);
+            return View("IndexProduto");
         }
 
         public IActionResult TelaExcluirProduto(int idProduto)
@@ -85,10 +84,10 @@ namespace Projeto1Loja.Controllers
             return View(produto);
         }
 
-        public IActionResult ExcluirProduto(int idProduto)
+        public IActionResult ExcluirProduto(int id)
         {
-            _produtoRepositorio.Excluir(idProduto);
-            return RedirectToAction(nameof(Index));
+            _produtoRepositorio.Excluir(id);
+            return RedirectToAction("IndexProduto", "Produto");
         }
 
     }

@@ -1,0 +1,79 @@
+﻿body {
+    background: url(../img/imgLogCad.jpg) no-repeat;
+    background-size: cover;
+}
+
+.formcadastro {
+    margin: 0 auto;
+    width: 20vw;
+    height: 70vh;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    background-color: rgba();
+    text-align: center;
+}
+
+.input-group input {
+    margin: 0 auto;
+    width: 70%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #eccaed;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.btn-cadastro {
+    width: 30%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #7c599d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.possui-conta {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.possui-conta a {
+    color: #6b2fa3;
+    text-decoration: none;
+}
+
+.possui-conta a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    width: 382px;
+    height: 640px;
+    box-shadow: 2px 6px 12px 0px rgba(0,0,0,0.2);
+    overflow: hidden;
+    border-color: #000000;
+}
+
+.card-body {
+    background-color: #fffcfc;
+    flex-grow: 1;
+    padding: 24px;
+}
+
+.card-title {
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 0px;
+}

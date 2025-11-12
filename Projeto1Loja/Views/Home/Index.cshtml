@@ -1,8 +1,17 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Início";
+    <link href="~/css/index.css" rel="stylesheet" />
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body>
+    <div class="principal">
+        <video autoplay muted loop>
+            <source src="./videos/videoBackgroundIndex.mp4" type="video/mp4" />
+        </video>
+        <div class="infos">
+                <h1>Seja bem vindo à E-volt</h1>
+                <h2>A potência da tecnologia, ao alcance das suas mãos</h2>
+                <a asp-area="" asp-controller="Usuario" asp-action="Login" class="btn" id="btnlogin">Clique aqui para fazer login</a>
+        </div>
+    </div>
+</body>

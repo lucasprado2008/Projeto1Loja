@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<link href="~/css/login.css" rel="stylesheet" />
+
+<body>
+    <div class="formlogin">
+        <div class="card">
+            <img src="~/img/imgLogCadSmall.jpg"/>
+            <div class="card-body">
+                <h2 class="card-title">Login</h2>
+                <form asp-action="Login" method="post">
+                    <div class="input-group">
+                        <input type="text" name="email" placeholder="Email" maxlength="50" required autofocus/>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="senha" placeholder="Senha" maxlength="50" required />
+                    </div>
+                    <button type="submit" class="btn-login">Entrar</button>
+                    <p class="criar-conta">Não tem conta? <a asp-area="" asp-controller="Usuario" asp-action="Cadastro">Cadastre-se</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
