@@ -4,17 +4,19 @@
     ViewData["Title"] = "Lista de Produtos";
 }
 
-<link href="~/css/listaProduto.css" rel="stylesheet" />
+<link href="~/css/listaproduto.css" rel="stylesheet" />
 
-<p>
-    <a asp-controller="Produto" asp-action="CadastrarProduto" class="btn btn-primary">Cadastrar Produto</a>
-</p>
+<div class="botoes">
+    <p>
+        <a asp-controller="Produto" asp-action="CadastrarProduto" class="btn btn-primary">Cadastrar Produto</a>
+    </p>
 
-<p>
-    <a asp-controller="Produto" asp-action="IndexProduto" class="btn btn-primary">Voltar</a>
-</p>
+    <p>
+        <a asp-controller="Usuario" asp-action="Login" id="btnvoltar" class="btn btn-primary">Voltar</a>
+    </p>
+</div>
 
-<table class="table custom-table">
+<table class="tabela">
     <thead>
         <tr>
             <th>

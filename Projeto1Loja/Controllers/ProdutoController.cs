@@ -29,7 +29,7 @@ namespace Projeto1Loja.Controllers
             if (ModelState.IsValid)
             {
                 _produtoRepositorio.CadastrarProduto(produto);
-                return RedirectToAction("Login", "Usuario");
+                return RedirectToAction("IndexProduto", "Produto");
             }
             return View();
         }

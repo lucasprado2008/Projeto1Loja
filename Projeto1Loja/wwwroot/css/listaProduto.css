@@ -1,0 +1,74 @@
+﻿body {
+    background-color:lightgrey;
+}
+
+.botoes {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-content:center;
+    overflow:visible;
+}
+
+.botoes p {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.tabela{
+    width:100%;
+    height: 5vh;
+}
+
+.tabela, th, td {
+    border: 3px double black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th{
+    background-color: #008d0c;
+    color:black;
+    font-weight:bold;
+}
+
+.btn-warning {
+    border-radius: 15px;
+    background-color: rgb(255 195 0);
+    color: black;
+    font-weight: bold;
+}
+
+.btn-warning:hover {
+    scale: 1.1;
+}
+
+.btn-danger {
+    border-radius:15px;
+    background-color:rgb(211, 17, 17);
+    color:black;
+    font-weight:bold;
+}
+
+.btn-danger:hover {
+    scale: 1.1;
+    color:black;
+}
+
+.btn-primary {
+    background: silver;
+    border-radius:20px;
+    border: 2px double black;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    scale: 1.1;
+    background: silver;
+    border: 2px double black;
+    color: black;
+}
