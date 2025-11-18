@@ -1,30 +1,38 @@
 ﻿body {
-    background-color: lightgray;
+    background: linear-gradient(90deg, #666f86 0%, #4d5364 100%);
 }
 
 .titulo-cli {
+    margin-top: 120px;
+    color: #919dc6;
+    font-weight: bold;
+    margin-bottom: 25px;
     text-align:center;
-    font-weight:bold;
-    margin-bottom:25px;
 }
 
 form {
     text-align: center;
 }
 
-.input-group{
-    margin-bottom:10px;
+.grupo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 input {
     margin-bottom:15px;
 }
 
-form .form-control {
-    color:black;
-    font-weight:bold;
+.input-personalizado {
+    color: black;
+    font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+    width: 300px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .btn-primary {
@@ -40,4 +48,16 @@ form .form-control {
     background: silver;
     border: 2px double black;
     color: black;
+}
+
+fieldset {
+    background: linear-gradient(90deg, #4a5163 0%, #2c3242 100%);
+    border: 3px solid black;
+    margin: 0 auto;
+    width: 40%;
+    border-radius:20px;
+}
+
+.btndiv {
+    margin-bottom:190px;
 }

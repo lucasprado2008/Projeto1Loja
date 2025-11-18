@@ -5,6 +5,12 @@
 <link href="~/css/login.css" rel="stylesheet" />
 
 <body>
+    @if (TempData["MensagemErro"] != null)
+    {
+        <script>
+            alert("@TempData["MensagemErro"]");
+        </script>
+    }
     <div class="formlogin">
         <div class="card">
             <img src="~/img/imgLogCadSmall.jpg"/>

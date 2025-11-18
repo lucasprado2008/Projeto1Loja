@@ -27,6 +27,7 @@ namespace Projeto1Loja.Controllers
             {
                 return RedirectToAction("IndexProduto", "Produto");
             }
+            TempData["MensagemErro"] = "Email ou senha incorretos.";
             return View();
         }
 

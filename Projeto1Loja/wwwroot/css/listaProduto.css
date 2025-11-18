@@ -77,3 +77,8 @@ th {
 fieldset {
     border:3px double black;
 }
+
+h1 {
+    text-align: center;
+    color: #919dc6  ;
+}

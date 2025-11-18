@@ -1,11 +1,12 @@
 ﻿body {
-    background-color: lightgray;
+    background: linear-gradient(90deg, #666f86 0%, #4d5364 100%);
 }
 
 .titulo-prod {
+    color: #919dc6;
+    font-weight: bold;
+    margin-bottom: 25px;
     text-align:center;
-    font-weight:bold;
-    margin-bottom:25px;
 }
 
 form {

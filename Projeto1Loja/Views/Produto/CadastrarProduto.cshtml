@@ -14,27 +14,27 @@
             <form asp-action="CadastrarProduto" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                <div class="input-group">
-                    <input asp-for="nome" class="form-control" placeholder="Nome" autofocus maxlength="50" required/>
+                <div class="grupo">
+                    <input asp-for="nome" class="input-personalizado" placeholder="Nome" autofocus maxlength="50" required />
                     <span asp-validation-for="nome" class="text-danger"></span>
                 </div>
 
-                <div class="input-group">
-                    <input asp-for="descricao" class="form-control" placeholder="Descrição" maxlength="50" required />
+                <div class="grupo">
+                    <input asp-for="descricao" class="input-personalizado" placeholder="Descrição" maxlength="50" required />
                     <span asp-validation-for="descricao" class="text-danger"></span>
                 </div>
 
-                <div class ="input-group">
-                    <input asp-for="preco" class="form-control" placeholder="Preço" required />
+                <div class ="grupo">
+                    <input asp-for="preco" class="input-personalizado" placeholder="Preço" required />
                     <span asp-validation-for="preco" class="text-danger"></span>
                 </div>
 
-                <div class="input-group">
-                    <input asp-for="quantidade" class="form-control" placeholder="Quantidade" required />
+                <div class="grupo">
+                    <input asp-for="quantidade" class="input-personalizado" placeholder="Quantidade" required />
                     <span asp-validation-for="quantidade" class="text-danger"></span>
                 </div>
 
-                <div class="btn">
+                <div class="btndiv">
                     <div class="form-group">
                         <input type="submit" value="Cadastrar" class="btn btn-primary" />
                     </div>
