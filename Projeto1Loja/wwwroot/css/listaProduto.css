@@ -1,8 +1,9 @@
 ﻿body {
-    background-color:lightgrey;
+    background:linear-gradient(90deg, #666f86 0%, #4d5364 100%);
 }
 
 .botoes {
+    margin-top: 30px;
     display:flex;
     flex-direction:row;
     justify-content:center;
@@ -29,10 +30,10 @@ th, td {
     text-align: center;
 }
 
-th{
-    background-color: #008d0c;
-    color:black;
-    font-weight:bold;
+th {
+    background: linear-gradient(90deg, #7b85aa 0%, #8995b7 100%);
+    color: black;
+    font-weight: bold;
 }
 
 .btn-warning {
@@ -59,8 +60,8 @@ th{
 }
 
 .btn-primary {
-    background: silver;
-    border-radius:20px;
+    background: linear-gradient(90deg, #a8b0cc 0%, #8796c2 100%);
+    border-radius: 20px;
     border: 2px double black;
     color: black;
     font-weight: bold;
@@ -68,7 +69,11 @@ th{
 
 .btn-primary:hover {
     scale: 1.1;
-    background: silver;
+    background: linear-gradient(90deg, #919dc6 0%, #576387 100%);
     border: 2px double black;
     color: black;
+}
+
+fieldset {
+    border:3px double black;
 }

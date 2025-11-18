@@ -6,42 +6,24 @@
 
 <link href="~/css/listaproduto.css" rel="stylesheet" />
 
-<div class="botoes">
-    <p>
-        <a asp-controller="Produto" asp-action="CadastrarProduto" class="btn btn-primary">Cadastrar Produto</a>
-    </p>
-
-    <p>
-        <a asp-controller="Usuario" asp-action="Login" id="btnvoltar" class="btn btn-primary">Voltar</a>
-    </p>
-</div>
+<fieldset>
 
 <table class="tabela">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.idProduto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.preco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.quantidade)
-            </th>
-            <th class="text-center">Ação</th>
+            <th>IdProduto</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th class="text-center">Ações</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
-        {
-            <tr>
-                <td>
+            {
+                <tr>
+                    <td>
                     @Html.DisplayFor(modelItem => item.idProduto)
                 </td>
                 <td>
@@ -62,7 +44,18 @@
                     <a asp-controller="Produto" asp-action="ExcluirProduto" asp-route-id="@item.idProduto"
                        onclick="return confirm('Deseja realmente Excluir este item?');" class="btn btn-sm btn-danger">Excluir</a>
                 </td>
-            </tr>
-        }
-    </tbody>
-</table>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="botoes">
+        <p>
+            <a asp-controller="Produto" asp-action="CadastrarProduto" class="btn btn-primary">Cadastrar Produto</a>
+        </p>
+
+        <p>
+            <a asp-controller="Usuario" asp-action="Login" id="btnvoltar" class="btn btn-primary">Voltar</a>
+        </p>
+    </div>
+</fieldset>
