@@ -7,6 +7,7 @@
 
     <link href="~/css/editarProduto.css" rel="stylesheet" />
 
+<fieldset>
     <h1 class="titulo-prod">Editar Produto</h1>
     <div class="row justify-content-center">
         <div class="col-md-4">
@@ -19,31 +20,31 @@
                     <span asp-validation-for="idProduto" class="text-danger"></span>
                 </div>
 
-                <div class="form-group">
-                    <label asp-for="nome" class="control-label"></label>
-                    <input asp-for="nome" class="form-control" autofocus maxlength="50" required/>
+                <div class="grupo">
+                    <label>Nome</label>
+                    <input asp-for="nome" class="inputpe" placeholder="Nome" autofocus maxlength="50" required />
                     <span asp-validation-for="nome" class="text-danger"></span>
                 </div>
 
-                <div class="form-group">
-                    <label asp-for="descricao" class="control-label"></label>
-                    <input asp-for="descricao" class="form-control" maxlength="50" required />
+                <div class="grupo">
+                    <label>Descrição</label>
+                    <input asp-for="descricao" class="inputpe" placeholder="Descrição" maxlength="50" required />
                     <span asp-validation-for="descricao" class="text-danger"></span>
                 </div>
 
-                <div class="form-group">
-                    <label asp-for="preco" class="control-label"></label>
-                    <input asp-for="preco" class="form-control" maxlength="50" required />
+                <div class="grupo">
+                    <label>Preço</label>
+                    <input asp-for="preco" class="inputpe" placeholder="Preço" maxlength="50" required />
                     <span asp-validation-for="preco" class="text-danger"></span>
                 </div>
 
-                <div class="form-group">
-                    <label asp-for="quantidade" class="control-label"></label>
-                    <input asp-for="quantidade" class="form-control" maxlength="50" required/>
+                <div class="grupo">
+                    <label>Quantidade</label>
+                    <input asp-for="quantidade" class="inputpe" placeholder="Quantidade" maxlength="50" required />
                     <span asp-validation-for="quantidade" class="text-danger"></span>
                 </div>
 
-                <div class="btn">
+                <div class="btndiv">
                     <div class="form-group">
                         <input type="submit" value="Alterar" class="btn btn-primary" />
                     </div>
@@ -55,3 +56,4 @@
             </form>
         </div>
     </div>
+</fieldset>

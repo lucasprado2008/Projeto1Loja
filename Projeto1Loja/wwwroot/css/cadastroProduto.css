@@ -2,7 +2,7 @@
     background: linear-gradient(90deg, #666f86 0%, #4d5364 100%);
 }
 
-.titulo-cli {
+.titulo-prod {
     margin-top: 120px;
     color: #919dc6;
     font-weight: bold;
@@ -24,7 +24,7 @@ input {
     margin-bottom:15px;
 }
 
-.input-personalizado {
+.inputpe {
     color: black;
     font-weight: bold;
     margin-bottom: 10px;

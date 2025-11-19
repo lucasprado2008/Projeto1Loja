@@ -3,29 +3,44 @@
 }
 
 .titulo-prod {
+    margin-top: 50px;
     color: #919dc6;
     font-weight: bold;
     margin-bottom: 25px;
-    text-align:center;
+    text-align: center;
+}
+
+label {
+    display:block;
+    color:lightgray;
+    font-weight:bold;
+    font-size:1.2rem;
 }
 
 form {
     text-align: center;
 }
 
-.input-group{
-    margin-bottom:10px;
+.grupo {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 input {
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
 
-form .form-control {
-    color:black;
-    font-weight:bold;
+.inputpe {
+    color: black;
+    font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+    width: 300px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .btn-primary {
@@ -41,4 +56,17 @@ form .form-control {
     background: silver;
     border: 2px double black;
     color: black;
+}
+
+
+fieldset {
+    background: linear-gradient(90deg, #4a5163 0%, #2c3242 100%);
+    border: 3px solid black;
+    margin: 0 auto;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.btndiv {
+    margin-bottom: 180px;
 }

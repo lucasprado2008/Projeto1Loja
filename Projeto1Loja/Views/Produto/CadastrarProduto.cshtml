@@ -8,29 +8,29 @@
 <link href="~/css/cadastroProduto.css" rel="stylesheet" />
 
 <fieldset>
-    <h1 class="titulo-cli">Cadastrar Produto</h1>
+    <h1 class="titulo-prod">Cadastrar Produto</h1>
     <div class="row justify-content-center">
         <div class="col-md-4">
             <form asp-action="CadastrarProduto" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                 <div class="grupo">
-                    <input asp-for="nome" class="input-personalizado" placeholder="Nome" autofocus maxlength="50" required />
+                    <input asp-for="nome" class="inputpe" placeholder="Nome" autofocus maxlength="50" required />
                     <span asp-validation-for="nome" class="text-danger"></span>
                 </div>
 
                 <div class="grupo">
-                    <input asp-for="descricao" class="input-personalizado" placeholder="Descrição" maxlength="50" required />
+                    <input asp-for="descricao" class="inputpe" placeholder="Descrição" maxlength="50" required />
                     <span asp-validation-for="descricao" class="text-danger"></span>
                 </div>
 
                 <div class ="grupo">
-                    <input asp-for="preco" class="input-personalizado" placeholder="Preço" required />
+                    <input asp-for="preco" class="inputpe" placeholder="Preço" required />
                     <span asp-validation-for="preco" class="text-danger"></span>
                 </div>
 
                 <div class="grupo">
-                    <input asp-for="quantidade" class="input-personalizado" placeholder="Quantidade" required />
+                    <input asp-for="quantidade" class="inputpe" placeholder="Quantidade" required />
                     <span asp-validation-for="quantidade" class="text-danger"></span>
                 </div>
 
